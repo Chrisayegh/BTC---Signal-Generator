@@ -19,14 +19,14 @@ This project builds a complete ML workflow to generate buy/sell signals on crypt
 ╚══════════════════════════════════════════════════════════════════╝
 
   ┌─────────────────────────────────────────────────────────────┐
-  │  📥 DATA INGESTION                                          │
+  │  **DATA INGESTION**                                         │
   │                                                             │
   │   Binance API  ──▶  Cache Check (30 min)  ──▶  Parquet     │
   └──────────────────────────────────┬──────────────────────────┘
                                      │
                                      ▼
   ┌─────────────────────────────────────────────────────────────┐
-  │  🔧 FEATURE ENGINEERING                                     │
+  │  **FEATURE ENGINEERING **                                   │
   │                                                             │
   │   OHLCV Parsing  ──▶  Outlier Removal  ──▶  20 Features    │
   │                                                             │
@@ -35,7 +35,7 @@ This project builds a complete ML workflow to generate buy/sell signals on crypt
                                      │
                                      ▼
   ┌─────────────────────────────────────────────────────────────┐
-  │  🤖 MODEL TRAINING  (80/20 temporal split)                  │
+  │  **MODEL TRAINING  (80/20 temporal split)**                 │
   │                                                             │
   │   ┌──────────────────┐     ┌──────────────────┐            │
   │   │ Logistic         │     │ Random Forest    │            │
@@ -46,7 +46,7 @@ This project builds a complete ML workflow to generate buy/sell signals on crypt
                           │
                           ▼
   ┌─────────────────────────────────────────────────────────────┐
-  │  📊 EVALUATION & EXPORT                                     │
+  │**  EVALUATION & EXPORT**                                    │
   │                                                             │
   │   Walk-Forward Validation  ──▶  Model Selection  ──▶  .pkl │
   └─────────────────────────────────────────────────────────────┘
